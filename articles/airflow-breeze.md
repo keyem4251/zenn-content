@@ -2,7 +2,7 @@
 title: "MACでAirflow Breezeを動かす"
 emoji: "✈️"
 type: "tech"
-topics: ["airflow", "breeze", "mac""]
+topics: ["airflow", "breeze", "mac"]
 published: true
 ---
 
