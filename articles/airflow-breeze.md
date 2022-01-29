@@ -1,5 +1,5 @@
 ---
-title: "MACでAirflow Breezeを動かす"
+title: "MacでAirflow Breezeを動かす"
 emoji: "✈️"
 type: "tech"
 topics: ["airflow", "breeze", "mac"]
