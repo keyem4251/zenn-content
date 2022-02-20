@@ -2,7 +2,7 @@
 title: "データ指向アプリケーションデザイン 2部 6章 まとめ"
 emoji: ""
 type: "idea"
-topics: ["", "", "", "memo"]
+topics: ["パーティショニング", "セカンダリインデックス", "memo"]
 published: false
 ---
 # はじめに
