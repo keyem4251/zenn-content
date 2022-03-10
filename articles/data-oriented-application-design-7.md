@@ -1,7 +1,7 @@
 ---
 title: "データ指向アプリケーションデザイン 2部 7章 まとめ"
 type: "idea"
-topics: ["", "", "memo"]
+topics: ["トランザクション", "", "memo"]
 published: false
 ---
 # はじめに
