@@ -11,10 +11,21 @@ published: false
 IntelliJを用いてKotlinを実行してます。コードは[こちらのGithub](https://github.com/keyem4251/kotlin-dbms/blob/master/README.md) にあります。
 
 ### データベース作成
-https://user-images.githubusercontent.com/53423344/160232120-e0013c3e-f3c1-41c3-a733-77cbaf981689.mp4
+kotlin/simpledb/tools/CreateStudentDB.ktをIntelliJから実行すると、指定したディレクトリがない場合にデータベースの作成、テーブルの作成、データのinsertを行います。  
+![データベース作成](https://storage.googleapis.com/zenn-user-upload/def2c002fdf8-20220326.png)
 
 ### データベース起動
-https://user-images.githubusercontent.com/53423344/160232133-1e9ac9e4-c1dc-40f4-a427-9f0aeae682fd.mp4
+kotlin/simpledb/server/StartServer.ktをIntelliJから実行すると、データベースへの接続を求められるので、接続先を入力します。  
+作成済みのstudentテーブルをselectします。
+![データベースに接続、select](https://storage.googleapis.com/zenn-user-upload/c47053527712-20220326.png)
+
+whereを用いた条件、他のテーブルとのjoinも行えます。
+![whereで条件を満たす行を抽出、他のテーブルとJOIN](https://storage.googleapis.com/zenn-user-upload/f159c4e63767-20220326.png)
+
+:::message  
+Github上には動画が載っているので実際の動いている様子を見たい方はGithubを参照ください  
+再掲[Github](https://github.com/keyem4251/kotlin-dbms/blob/master/README.md)
+:::
 
 # 本の概要
 書籍の内容としては全部で15章となっており目次は下記となっています。  
@@ -49,6 +60,7 @@ https://user-images.githubusercontent.com/53423344/160232133-1e9ac9e4-c1dc-40f4-
 - create index I on T(F)
 
 :::message  
+SimpleDBでは文字列と数値型のみ対応をしています  
 11章のJDBCを用いた実装は書籍の中ではJavaのRMIを用いた実装も載っていますが、今回はEmbedded JDBC interfaceしか実装してません  
 :::
 
