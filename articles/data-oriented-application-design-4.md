@@ -3,7 +3,7 @@ title: "データ指向アプリケーションデザイン 1部 4章 まとめ"
 emoji: "🛳"
 type: "idea"
 topics: ["エンコード", "JSON", "ProtocolBuffers"]
-published: true
+published: false
 ---
 # はじめに
 データ指向アプリケーションデザインを読んでいるので自分の理解のためにメモをまとめます。  
