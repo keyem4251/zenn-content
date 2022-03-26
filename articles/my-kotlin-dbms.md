@@ -48,7 +48,7 @@ https://user-images.githubusercontent.com/53423344/160232133-1e9ac9e4-c1dc-40f4-
 - create view V as select F1, F2 from T1, T2 where F3=F4
 - create index I on T(F)
 
-:::note info  
+:::message  
 11章のJDBCを用いた実装は書籍の中ではJavaのRMIを用いた実装も載っていますが、今回はEmbedded JDBC interfaceしか実装してません  
 :::
 
