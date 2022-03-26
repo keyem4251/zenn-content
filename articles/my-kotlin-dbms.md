@@ -1,8 +1,9 @@
 ---
 title: "Kotlinで自作DBMS"
+emoji: "🪐"
 type: "tech"
 topics: ["kotlin", "dbms"]
-published: false
+published: true
 ---
 # はじめに
 データベースの勉強のために[SimpleDB](http://www.cs.bc.edu/~sciore/simpledb/) というJavaで書かれたデータベースの実装が書かれている書籍を参考にKotlinで実装を行いました。  
