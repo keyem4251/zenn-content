@@ -9,7 +9,7 @@ published: true
 データベースの勉強のために[SimpleDB](http://www.cs.bc.edu/~sciore/simpledb/) というJavaで書かれたデータベースの実装が書かれている書籍を参考にKotlinで実装を行いました。  
 
 # どんなものができるか
-IntelliJを用いてKotlinを実行してます。コードは[こちらのGithub](https://github.com/keyem4251/kotlin-dbms/blob/master/README.md) にあります。
+IntelliJを用いてKotlinを実行してます。コードは[こちらのGitHub](https://github.com/keyem4251/kotlin-dbms/blob/master/README.md) にあります。
 
 ### データベース作成
 kotlin/simpledb/tools/CreateStudentDB.ktをIntelliJから実行すると、指定したディレクトリがない場合にデータベースの作成、テーブルの作成、データのinsertを行います。  
@@ -24,7 +24,7 @@ whereを用いた条件、他のテーブルとのjoinも行えます。
 ![whereで条件を満たす行を抽出、他のテーブルとJOIN](https://storage.googleapis.com/zenn-user-upload/f159c4e63767-20220326.png)
 
 :::message  
-Github上には動画が載っているので実際の動いている様子を見たい方はGithubを参照ください  
+GitHub上には動画が載っているので実際の動いている様子を見たい方はGitHubを参照ください  
 再掲[Github](https://github.com/keyem4251/kotlin-dbms/blob/master/README.md)
 :::
 
