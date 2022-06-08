@@ -25,7 +25,7 @@ whereを用いた条件、他のテーブルとのjoinも行えます。
 
 :::message  
 GitHub上には動画が載っているので実際の動いている様子を見たい方はGitHubを参照ください  
-再掲[Github](https://github.com/keyem4251/kotlin-dbms/blob/master/README.md)
+再掲[GitHub](https://github.com/keyem4251/kotlin-dbms/blob/master/README.md)
 :::
 
 # 本の概要
