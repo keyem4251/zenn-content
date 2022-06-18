@@ -10,7 +10,7 @@ published: true
 SQLのLintツールにSQLFluffというものがあります、コミット時に自動でLintをかけるためのpre-commitと組み合わせて実行させるための手順をまとめました。  
 
 # pre-commitインストール&設定方法
-pre-commitの説明、手順は[こちら](https://pre-commit.com)。  
+pre-commitの公式の説明、手順は[こちら](https://pre-commit.com)。  
 pipでインストールできます。
 ```
 $ pip install pre-commit
@@ -37,7 +37,7 @@ pre-commit installed at .git/hooks/pre-commit
 これでpre-commitの設定完了となります。  
 
 # SQLFluffインストール&設定方法
-SQLFluffの説明、手順は[こちら](https://www.sqlfluff.com)。
+SQLFluffの公式の説明、手順は[こちら](https://www.sqlfluff.com)。
 こちらも同じくpipでインストールできます。  
 ```
 $ pip install sqlfluff
