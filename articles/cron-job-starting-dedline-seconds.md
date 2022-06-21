@@ -2,7 +2,7 @@
 title: "Cron JobでstartingDeadlineSeconds設定のすすめ"
 emoji: "🦥"
 type: "tech"
-topics: ["kubernetes", "cronjob"]
+topics: ["kubernetes", "cronjob", "gcp"]
 published: true
 ---
 
