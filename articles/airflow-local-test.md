@@ -2,7 +2,7 @@
 title: "AirflowでローカルのPythonファイルのimport、syntaxテスト"
 emoji: "⛑"
 type: "tech"
-topics: ["airflow", "test"]
+topics: ["airflow", "test", "python"]
 published: true
 ---
 
