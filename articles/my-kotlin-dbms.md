@@ -2,7 +2,7 @@
 title: "Kotlinで自作DBMS"
 emoji: "🪐"
 type: "tech"
-topics: ["kotlin", "dbms"]
+topics: ["kotlin", "dbms", "db", "database"]
 published: true
 ---
 # はじめに
