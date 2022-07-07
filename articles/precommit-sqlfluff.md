@@ -36,16 +36,6 @@ pre-commit installed at .git/hooks/pre-commit
 ```
 これでpre-commitの設定完了となります。  
 
-# SQLFluffインストール&設定方法
-SQLFluffの公式の説明、手順は[こちら](https://www.sqlfluff.com)。
-こちらも同じくpipでインストールできます。  
-```
-$ pip install sqlfluff
-$ sqlfluff version
-0.13.2
-```
-SQLFLuffの設定はひとまず完了です。  
-
 # 動作確認
 サンプルのファイルとして以下のようなSQLファイルを作成します。  
 ```
@@ -120,4 +110,16 @@ sqlfluff-fix.............................................................Passed
 ```
 無事にコミットが成功しました。  
 今回は基本の設定にしましたが、SQLFluff自体にも設定ファイルを作成することで独自のルールを設定することができます。  
-設定方法は[こちら](https://docs.sqlfluff.com/en/stable/gettingstarted.html#custom-usage)をご覧ください。
+設定方法は[こちら](https://docs.sqlfluff.com/en/stable/gettingstarted.html#custom-usage)をご覧ください。  
+
+# 参考）SQLFluffインストール&設定方法
+pre-commitからのみの利用であれば個別にインストールする必要はありません。  
+SQLFluffの公式の説明、手順は[こちら](https://www.sqlfluff.com)。
+こちらも同じくpipでインストールできます。  
+```
+$ pip install sqlfluff
+$ sqlfluff version
+0.13.2
+```
+SQLFLuffの設定はひとまず完了です。  
+
