@@ -11,7 +11,8 @@ Cloud Composerをローカル環境で動作確認を行うことができる[co
 
 # インストール  
 インストールは[公式のとおり](https://cloud.google.com/composer/docs/composer-2/run-local-airflow-environments)に行っていきます。  
-Githubのソースコードは[ここ](https://github.com/GoogleCloudPlatform/composer-local-dev)にあります。
+今回のGithubのソースコードは[ここ](https://github.com/keyem4251/composer-dev-example)にあります。  
+公式のcomposer-local-devのソースコードは[こちら](https://github.com/GoogleCloudPlatform/composer-local-dev/tree/2c8a516c547125c7ebf9e8e120b8301bb5098763)です。  
 
 まずは認証情報の構成を設定します。
 ```
@@ -70,6 +71,7 @@ Started example-local-environment environment.
 2. Access Airflow at http://localhost:8080
 ```
 Airflow UIにアクセスを行うと![このように](https://storage.googleapis.com/zenn-user-upload/3be257e7084a-20221225.png)DAGが登録されていることが確認できます。  
+今回は簡単なecho hellloするだけの[DAG](https://github.com/keyem4251/composer-dev-example/blob/main/dags/sample.py)をdagsフォルダに置いています。
 
 DAGを実行するとCLIからログが確認できます。  
 ```
@@ -101,13 +103,7 @@ Airflow 環境の停止を行います。
 $ composer-dev stop example-local-environment
 Stopped composer local environment.
 ```
-
-Docker イメージの削除..動かない
-```
-$ docker rmi $(docker images --filter=reference='*/cloud-airflow-releaser/*/*' -q)
-Error response from daemon: conflict: unable to delete 428a4887bf60 (must be forced) - image is being used by stopped container 4ccc178d3498
-```
-Docker イメージの削除..-fオプションで強制削除
+停止を行うだけではDockerイメージは削除されないので直接dockerコマンドを使って削除します。
 ```
 $ docker rmi -f $(docker images --filter=reference='*/cloud-airflow-releaser/*/*' -q)
 Error response from daemon: conflict: unable to delete 428a4887bf60 (must be forced) - image is being used by stopped container 4ccc178d3498
