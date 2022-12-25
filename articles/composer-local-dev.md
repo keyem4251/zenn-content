@@ -1,6 +1,6 @@
 ---
 title: "Cloud Composerのローカル開発 composer-local-dev お試し"
-emoji: ""
+emoji: "🤖"
 type: "tech"
 topics: ["airflow", "GCP", "Composer"]
 published: false
