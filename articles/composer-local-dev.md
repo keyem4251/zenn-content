@@ -3,7 +3,7 @@ title: "Cloud Composerのローカル開発 composer-local-dev お試し"
 emoji: "🤖"
 type: "tech"
 topics: ["airflow", "GCP", "Composer"]
-published: false
+published: true
 ---
 # はじめに
 Cloud Composerをローカル環境で動作確認を行うことができる[composer-local-dev](https://cloud.google.com/composer/docs/composer-2/run-local-airflow-environments)というものがリリースされたので試してみます。  
