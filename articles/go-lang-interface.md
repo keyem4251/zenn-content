@@ -1,5 +1,5 @@
 ---
-title: "Goらしいインターフェースの書き方: 実装する側に定義する"
+title: "Goらしいインターフェースの書き方: 利用する側に定義する"
 emoji: "🐭"
 type: "tech"
 topics: ["go", "interface"]
