@@ -7,14 +7,14 @@ published: false
 ---
 
 # はじめに
-認証方式の基礎となるRFC7617: Basic認証について調べたのでまとめます。」
+認証方式の基礎となるRFC7617: Basic認証について調べたのでまとめます。
 RFC7617は前回紹介した[RFC7235](https://zenn.dev/keyem4251/articles/rfc7236-authentication-flamework)の上で動作をする具体的な認証の方式となります。
 基本的に現在だとサービス間の認証として使われることは少ないですが、これ以降の認証方式へ変化していくうえでのもとになる仕組みとなっています。
 またBasic認証と一緒にDigest認証についても説明します。
 
 # 概要
 Basic認証ではBase64を用いてエンコードされたユーザー名、パスワードのペアをBasicという文字列と合わせて送信することで認証を行う方式です。
-RFC7235で定義されたチャレンジ&レスポンス方式の流れで、サーバーから `WWW-Authenticate: Basic realm="myapp" という形式でrealm（どこに対しての認証か？）とBasic認証で認証情報を送ってくださいというチャレンジがあります。
+RFC7235で定義されたチャレンジ&レスポンス方式の流れで、サーバーから `WWW-Authenticate: Basic realm="myapp"` という形式でrealm（どこに対しての認証か？）とBasic認証で認証情報を送ってくださいというチャレンジがあります。
 これに対して、クライアントは `Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==` をHeaderに付与してレスポンスを返します。
 
 # 詳細な設定
