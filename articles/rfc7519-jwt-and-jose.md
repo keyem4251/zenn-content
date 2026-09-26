@@ -1,8 +1,8 @@
 ---
-title: "RFC7519: JWTとそれに関連するJOSE"
+title: "RFC7519: JWTとJOSEワーキンググループ（JWS、JWE、JWK）"
 emoji: ""
 type: "tech"
-topics: ["rfc", "authentication", "oauth", "jwt", "jose"]
+topics: ["rfc", "authentication", "oauth", "jwt", "jose", "jws", "jwe", "jwk"]
 published: false
 ---
 
