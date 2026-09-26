@@ -1,5 +1,5 @@
 ---
-title: "RFC7519: JWTとJOSEグループ"
+title: "RFC7519: JWTとそれに関連するJOSE"
 emoji: ""
 type: "tech"
 topics: ["rfc", "authentication", "oauth", "jwt", "jose"]
