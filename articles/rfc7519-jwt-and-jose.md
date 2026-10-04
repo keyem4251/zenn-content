@@ -1,9 +1,9 @@
 ---
-title: "RFC7519: JWTとJOSEワーキンググループ（JWS、JWE、JWK）"
+title: "RFC7519: JWTとJOSE（JWS、JWE、JWK、JWA）"
 emoji: ""
 type: "tech"
 topics: ["rfc", "authentication", "oauth", "jwt", "jose", "jws", "jwe", "jwk"]
-published: false
+published: true
 ---
 
 # はじめに
@@ -92,7 +92,7 @@ JWTの中の値はクレーム（Claim）と呼ばれており、主要な値に
 JOSEではここまで説明してきたJWTをどう安全にやり取りするかということが定義されています。
 RFC7165で定義されており、JSON Object Signing and Encryptionの略でJSONを署名・暗号化して安全にやり取りするための仕様をまとめたものになります。IETFというインターネットの技術標準化の機関でワーキンググループがあり、そこで定義されました。
 JOSEではJSONを「整合性」、「機密性」、これらを実現するための「鍵」の3つの構成要素でどうやり取りするかということをまとめています。
-それぞれがJWS、JWE、JWKとして対応しており、RFC7515、RFC7516、RFC7157として定義されています。厳密にはさらに鍵をどういうアルゴリズムで使用するかを定めたJWA（RFC7518）もあります。
+それぞれがJWS、JWE、JWKとして対応しており、RFC7515、RFC7516、RFC7517として定義されています。厳密にはさらに鍵をどういうアルゴリズムで使用するかを定めたJWA（RFC7518）もあります。
 
 JWTとJOSEについての関係性はauth0の「[Demystifying JOSE, the JWT Family: JWS, JWE, JWA, and JWK Explained](https://auth0.com/blog/demystifying-jose-jwt-family/)」という記事が非常にイメージとしてわかりやすいです。
 簡単に解説するとJOSEはデータを安全にやりとりするための規格で、JWTはそのデータ自体。具体的にはJWTを運びたい荷物だとすると、JWSあるいはJWEは荷物を梱包するコンテナや金庫のようなもので、JWKはコンテナ、金庫を開けるための鍵、JWAはダイヤルなのか、南京錠なのかなどの施錠の仕方。JOSEはそれらを取りまとめる荷物を安全に届けるための手法を定義していったものということです。
@@ -101,7 +101,7 @@ JWTとJOSEについての関係性はauth0の「[Demystifying JOSE, the JWT Fami
 
 ## JWS
 JWSはJWTでやり取りされるデータが改ざんされていないか、送った相手が正しいかを担保する仕組みで、RFC7515で定義されています。
-JWTの具体的でも説明しましたが、JWTのHeader部分に署名アルゴリズム、SignatureにHeader、Payloadの連結した署名とすることでクライアント、サーバー間でデータが改ざんされていないかを検証することでデータの整合性を担保します。
+JWTの概要でも説明しましたが、JWTのHeader部分に署名アルゴリズム、SignatureにHeader、Payloadの連結した署名とすることでクライアント、サーバー間でデータが改ざんされていないかを検証することでデータの整合性を担保します。
 先ほどのJWTの例を見ると `eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJqb2UiLCJleHAiOjEzMDA4MTkzODAsImh0dHA6Ly9leGFtcGxlLmNvbS9pc19yb290Ijp0cnVlfQ.B5Y3F93iWbTjV1B9_G6Q-e0sC8_b3kZ4R6wH_eW8bI0` という値をサーバーが受け取った場合には
 - トークンを`'.'`でHeader、Payload、Signatureに分割する。
 ```
@@ -193,4 +193,4 @@ JWAはこれまでのJWT、JWS、JWE、JWKで出てきたアルゴリズムの�
 
 # まとめと所感
 JWTというと当初はJWS、JWEなどとまとめたものをイメージしていたが、それぞれのRFCを見ていくと適切にそれぞれの責務ごとに定義されているということがわかります。
-認証・認可の流れで以前の記事でBasic認証を紹介しましたが、パスワードなどをそのまま送っていた状態から比較するとJWTでは認証・認可に利用する値自体とそれ以外のセキュリティ要件を分割することで現代でも利用されるようになっているということがわかります。
+認証・認可の流れで[以前の記事でBasic認証](https://zenn.dev/keyem4251/articles/rfc7617-basic-auth)を紹介しましたが、パスワードなどをそのまま送っていた状態から比較するとJWTでは認証・認可に利用する値自体とそれ以外のセキュリティ要件を分割することで現代でも利用されるようになっているということがわかります。
